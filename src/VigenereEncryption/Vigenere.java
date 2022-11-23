@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Vigenere {
 
-    public char[] message;//mensaje
+    public char[] message;
     public char[] result;
     public char[] password;
     public char[][] matrix;
@@ -14,11 +14,11 @@ public class Vigenere {
 
     public Vigenere(String littleMessage, String code) { //recibe por parametros los valores
 
-        String msgMay = littleMessage.toUpperCase();//convierte la cadena(littleMessage) en mayusculas
-        this.message = msgMay.toCharArray();
+        String msgMay = littleMessage.toUpperCase();//convierte el parametro(littleMessage) en mayusculas
+        this.message = msgMay.toCharArray();//convierte el String en un array de caracteres
 
-        String claveMay = code.toUpperCase();//convierte la cadena(code) en mayusculas
-        char[] passTmp = claveMay.toCharArray();
+        String claveMay = code.toUpperCase();//convierte el parametro(code) en mayusculas
+        char[] passTmp = claveMay.toCharArray();//convierte el String en una array de caracteres
 
         this.password = new char[message.length];
         int count = 0;
@@ -32,18 +32,18 @@ public class Vigenere {
         }
 
         this.matrix = createMatrixAlphabet();
-        //encryptMessage();
+        encryptMessage();
     }
 
     public void encryptMessage() {
         char[] code = new char[message.length];
-        int ejeX;
-        int ejeY;
+        int ejeX;   //crea coordenadas de una matriz eje X los valores del mensaje
+        int ejeY;   // eje Y los valores de la clave
 
         for (int cont = 0; cont < message.length; cont++) {
-            ejeX = (int) this.message[cont] - 65;
+            ejeX = (int) this.message[cont] - 65;//se posiciona en la primera letra mayuscula
             ejeY = (int) this.password[cont] - 65;
-            code[cont] = this.matrix[ejeX][ejeY];
+            code[cont] = this.matrix[ejeX][ejeY]; // se posiciona en la coordenada exacta de la matriz
         }
         this.result=code;//se almacena el valor de la busqueda en la matriz
         System.out.println(this.message);
@@ -59,7 +59,7 @@ public class Vigenere {
         return aux;
     }
 
-    private char[][] createMatrixAlphabet() {
+    char[][] createMatrixAlphabet() {
         int counter = 0;
         char[] alphaTemp = this.createAlphabet();
         char[] alpha = new char[alphaTemp.length * 2];
@@ -89,52 +89,3 @@ public class Vigenere {
     }
 
 }
-
-
-
-
-
-/*package com.sanfoundry.setandstring;
-
-public class VigenereCipher
-{
-    public static String encrypt(String text, final String key)
-    {
-        String res = "";
-        text = text.toUpperCase();
-        for (int i = 0, j = 0; i < text.length(); i++)
-        {
-            char c = text.charAt(i);
-            if (c < 'A' || c > 'Z')
-                continue;
-            res += (char) ((c + key.charAt(j) - 2 * 'A') % 26 + 'A');
-            j = ++j % key.length();
-        }
-        return res;
-    }
-
-    public static String decrypt(String text, final String key)
-    {
-        String res = "";
-        text = text.toUpperCase();
-        for (int i = 0, j = 0; i < text.length(); i++)
-        {
-            char c = text.charAt(i);
-            if (c < 'A' || c > 'Z')
-                continue;
-            res += (char) ((c - key.charAt(j) + 26) % 26 + 'A');
-            j = ++j % key.length();
-        }
-        return res;
-    }
-
-    public static void main(String[] args)
-    {
-        String key = "VIGENERECIPHER";
-        String message = "Beware the Jabberwock, my son! The jaws that bite, the claws that catch!";
-        String encryptedMsg = encrypt(message, key);
-        System.out.println("String: " + message);
-        System.out.println("Encrypted message: " + encryptedMsg);
-        System.out.println("Decrypted message: " + decrypt(encryptedMsg, key));
-    }
-}*/
