@@ -4,10 +4,23 @@ import java.util.Scanner;
 
 public class Vigenere {
 
-    private char[] message;
+    public Vigenere(String msg,String clave) { //recibe por parametros los valores
+        this.message = msg.toCharArray();
+        char[] passTmp = clave.toCharArray();
+        this.password = new char[password.length];
+
+
+
+
+    }
+
+    private char[] message;//mensake
     private final char[] alphabet = new char[26];
-    private char letter;
     private char[] password;
+
+    public Vigenere() {
+
+    }
 
     char[][] matrixAlphabet() {
         int counter = 0;

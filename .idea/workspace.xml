@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42d4d304-bac7-4e64-a41c-52f2e551680d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VigenereEncryption/Vigenere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="42d4d304-bac7-4e64-a41c-52f2e551680d" name="Changes" comment="creacion de matriz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VigenereEncryption/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vigenere.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VigenereEncryption/Vigenere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VigenereEncryption/Vigenere.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/mjosu/Desktop/JAVA-JDBC-CRUD-with-MAVEN-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,8 +57,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669159944151</updated>
-      <workItem from="1669159945420" duration="6706000" />
+      <workItem from="1669159945420" duration="10858000" />
     </task>
+    <task id="LOCAL-00001" summary="creacion de matriz">
+      <created>1669168080892</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669168080892</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,5 +82,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="creacion de matriz" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion de matriz" />
   </component>
 </project>
