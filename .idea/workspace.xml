@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42d4d304-bac7-4e64-a41c-52f2e551680d" name="Changes" comment="correccion de sintaxis">
+    <list default="true" id="42d4d304-bac7-4e64-a41c-52f2e551680d" name="Changes" comment="correccion de sintaxis 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VigenereEncryption/Vigenere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VigenereEncryption/Vigenere.java" afterDir="false" />
     </list>
@@ -57,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669159944151</updated>
-      <workItem from="1669159945420" duration="17169000" />
+      <workItem from="1669159945420" duration="19757000" />
     </task>
     <task id="LOCAL-00001" summary="creacion de matriz">
       <created>1669168080892</created>
@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669183861275</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="correccion de sintaxis 2">
+      <created>1669185037885</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669185037885</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +108,7 @@
     <MESSAGE value="creacion de matriz" />
     <MESSAGE value="creacion constructor" />
     <MESSAGE value="correccion de sintaxis" />
-    <option name="LAST_COMMIT_MESSAGE" value="correccion de sintaxis" />
+    <MESSAGE value="correccion de sintaxis 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="correccion de sintaxis 2" />
   </component>
 </project>

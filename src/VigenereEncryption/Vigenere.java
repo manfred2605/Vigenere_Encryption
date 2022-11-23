@@ -12,7 +12,7 @@ public class Vigenere {
     public Vigenere() {
     }
 
-    public Vigenere(String littleMessage,String code) { //recibe por parametros los valores
+    public Vigenere(String littleMessage, String code) { //recibe por parametros los valores
 
         String msgMay = littleMessage.toUpperCase();//convierte la cadena(littleMessage) en mayusculas
         this.message = msgMay.toCharArray();
@@ -21,12 +21,12 @@ public class Vigenere {
         char[] passTmp = claveMay.toCharArray();
 
         this.password = new char[message.length];
-        int count=0;
+        int count = 0;
 
-       for(int i =0;i<message.length;i++){//compara la clave con el mensaje a encriptar
+        for (int i = 0; i < message.length; i++) {//compara la clave con el mensaje a encriptar
             this.password[i] = passTmp[count];
             count++;
-            if(count==passTmp.length){
+            if (count == passTmp.length) {
                 count = 0;
             }
         }
@@ -35,7 +35,29 @@ public class Vigenere {
         //encryptMessage();
     }
 
+    public void encryptMessage() {
+        char[] code = new char[message.length];
+        int ejeX;
+        int ejeY;
 
+        for (int cont = 0; cont < message.length; cont++) {
+            ejeX = (int) this.message[cont] - 65;
+            ejeY = (int) this.password[cont] - 65;
+            code[cont] = this.matrix[ejeX][ejeY];
+        }
+        this.result=code;//se almacena el valor de la busqueda en la matriz
+        System.out.println(this.message);
+        System.out.println(this.password);
+        System.out.println(code);
+    }
+
+    public String getMessageEncrypted(){
+        String aux = "";
+        for(int i=0;i<result.length;i++) {
+            aux += this.result[i];
+        }
+        return aux;
+    }
 
     private char[][] createMatrixAlphabet() {
         int counter = 0;
