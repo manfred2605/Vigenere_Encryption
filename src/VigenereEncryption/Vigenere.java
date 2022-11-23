@@ -4,25 +4,38 @@ import java.util.Scanner;
 
 public class Vigenere {
 
+
+    public char[] message;//mensaje
+    public char[] result;
+    public char[] password;
+    public char[][] matrix;
+
+    public Vigenere() {
+    }
+
     public Vigenere(String msg,String clave) { //recibe por parametros los valores
+
         this.message = msg.toCharArray();
         char[] passTmp = clave.toCharArray();
         this.password = new char[password.length];
+        int count=0;
+
+       for(int i =0;i<message.length;i++){//compara la clave con el mensaje a encriptar
+            this.password[i] = passTmp[count];
+            count++;
+            if(count==passTmp.length){
+                count = 0;
+            }
+        }
 
 
-
-
+        this.matrix = createMatrixAlphabet();
+        //encryptMessage();
     }
 
-    private char[] message;//mensake
-    private final char[] alphabet = new char[26];
-    private char[] password;
 
-    public Vigenere() {
 
-    }
-
-    char[][] matrixAlphabet() {
+    private char[][] createMatrixAlphabet() {
         int counter = 0;
         char[] alphaTemp = this.createAlphabet();
         char[] alpha = new char[alphaTemp.length * 2];
@@ -34,7 +47,9 @@ public class Vigenere {
 
         char[][] matrix = new char[26][26];
         for (int i = 0; i < 26; i++) {
+
             for (int k = 0; k < 26; k++) {
+                matrix[i][k] = alpha[counter + i];
                 counter++;
             }
         }
