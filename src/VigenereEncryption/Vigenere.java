@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Vigenere {
 
-
     public char[] message;//mensaje
     public char[] result;
     public char[] password;
@@ -13,11 +12,15 @@ public class Vigenere {
     public Vigenere() {
     }
 
-    public Vigenere(String msg,String clave) { //recibe por parametros los valores
+    public Vigenere(String littleMessage,String code) { //recibe por parametros los valores
 
-        this.message = msg.toCharArray();
-        char[] passTmp = clave.toCharArray();
-        this.password = new char[password.length];
+        String msgMay = littleMessage.toUpperCase();//convierte la cadena(littleMessage) en mayusculas
+        this.message = msgMay.toCharArray();
+
+        String claveMay = code.toUpperCase();//convierte la cadena(code) en mayusculas
+        char[] passTmp = claveMay.toCharArray();
+
+        this.password = new char[message.length];
         int count=0;
 
        for(int i =0;i<message.length;i++){//compara la clave con el mensaje a encriptar
@@ -27,7 +30,6 @@ public class Vigenere {
                 count = 0;
             }
         }
-
 
         this.matrix = createMatrixAlphabet();
         //encryptMessage();
